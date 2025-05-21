@@ -1,4 +1,5 @@
 # MCP Google Custom Search Server
+[![smithery badge](https://smithery.ai/badge/@limklister/mcp-google-custom-search-server)](https://smithery.ai/server/@limklister/mcp-google-custom-search-server)
 
 A Model Context Protocol (MCP) server that provides web search capabilities through Google's Custom Search API. This server enables Language Learning Models (LLMs) to perform web searches using a standardized interface.
 
@@ -36,6 +37,15 @@ Before you begin, ensure you have:
 
 ## 🚀 Quick Start
 
+### Installing via Smithery
+
+To install Google Custom Search Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@limklister/mcp-google-custom-search-server):
+
+```bash
+npx -y @smithery/cli install @limklister/mcp-google-custom-search-server --client claude
+```
+
+### Manual Installation
 1. Clone the repository:
 
    ```bash
