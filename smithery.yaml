@@ -1,0 +1,24 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'node', args: ['build/index.js'], env: { GOOGLE_API_KEY: config.googleApiKey, GOOGLE_SEARCH_ENGINE_ID: config.googleSearchEngineId } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - googleApiKey
+      - googleSearchEngineId
+    properties:
+      googleApiKey:
+        type: string
+        description: Google Custom Search API key
+      googleSearchEngineId:
+        type: string
+        description: Google Custom Search Engine ID
+  exampleConfig:
+    googleApiKey: AIzaSyD-EXAMPLEKEY1234567890
+    googleSearchEngineId: 012345678901234567890:abcdefg_hij
